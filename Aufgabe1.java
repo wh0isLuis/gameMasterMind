@@ -110,32 +110,8 @@ public class Aufgabe1 {
 
         for (int row = 0; row < NUMBER_OF_TURNS; row++) {
             for (int col = 0; col < CODE_LENGTH; col++) {
-                if (playField[row][col] == 1) {
-                    myDrawObj.setColor(Color.BLUE);
-                    myDrawObj.fillCircle(45 + col * 90, 760 - row * 80, 40);
-                } else if (playField[row][col] == 2) {
-                    myDrawObj.setColor(Color.CYAN);
-                    myDrawObj.fillCircle(45 + col * 90, 760 - row * 80, 40);
-                } else if (playField[row][col] == 3) {
-                    myDrawObj.setColor(Color.GREEN);
-                    myDrawObj.fillCircle(45 + col * 90, 760 - row * 80, 40);
-                } else if (playField[row][col] == 4) {
-                    myDrawObj.setColor(Color.MAGENTA);
-                    myDrawObj.fillCircle(45 + col * 90, 760 - row * 80, 40);
-                } else if (playField[row][col] == 5) {
-                    myDrawObj.setColor(Color.ORANGE);
-                    myDrawObj.fillCircle(45 + col * 90, 760 - row * 80, 40);
-                } else if (playField[row][col] == 6) {
-                    myDrawObj.setColor(Color.DARK_GRAY);
-                    myDrawObj.fillCircle(45 + col * 90, 760 - row * 80, 40);
-                } else if (playField[row][col] == 7) {
-                    myDrawObj.setColor(Color.RED);
-                    myDrawObj.fillCircle(45 + col * 90, 760 - row * 80, 40);
-                } else if (playField[row][col] == 8) {
-                    myDrawObj.setColor(Color.PINK);
-                    myDrawObj.fillCircle(45 + col * 90, 760 - row * 80, 40);
-                } else if (playField[row][col] == 9) {
-                    myDrawObj.setColor(Color.YELLOW);
+                if(playField[row][col]!=0) {
+                    myDrawObj.setColor(COLORS[playField[row][col] - 1]);
                     myDrawObj.fillCircle(45 + col * 90, 760 - row * 80, 40);
                 }
             }
